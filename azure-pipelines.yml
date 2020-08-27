@@ -16,7 +16,7 @@ trigger:
     publishLocation: 'Container'
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
 - script: echo Hello, world!
