@@ -5,6 +5,11 @@
 
 trigger:
 - master
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: '**/FhirWorkFLowLabWebApi/*.csproj'
+    feedsToUse: 'select'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
